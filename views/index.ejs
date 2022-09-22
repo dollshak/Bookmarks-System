@@ -1,0 +1,46 @@
+    <%- include('include/_header')%>
+
+        <!--main site-->
+        <main id = "site-main">
+            <div class = "container">
+              <input type="button"
+              value="new bookmark"
+              onclick="location.href='/add-bookmark'">
+
+              <div>
+                <a>
+                <button class = "text-gradient" onclick="sortTableByColumn(0)">sort by name</button>
+                </a>
+              </div>
+              <div>
+                <button onclick="sortTableByColumn(2)">sort by description</button>
+              </div>
+
+      
+              <!--form handling-->
+              <form action="/" method="POST">
+                <table class="table" id="bookmarksTable">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Name</th>
+                      <th>Address</th>
+                      <th>Description</th>
+                      <th>Task</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+      
+                  <tbody>
+                    <%- include('include/_show')%>
+                  </tbody>
+      
+                </table>
+              </form>
+            </div>
+          </main>
+          <!--main site-->
+
+
+
+
+<%- include('include/_footer')%>

@@ -1,0 +1,16 @@
+<%for (var i = 0; i<bookmarks.length; i++){%>
+<tr>
+    <td><%=bookmarks[i].name%></td>
+    <td><a href=<%=bookmarks[i].address%> target="_blank"><%=bookmarks[i].address%></a></td>
+    <td><%=bookmarks[i].description%></td>
+    <td><%=bookmarks[i].task%></td>
+    <td>
+      <!-- <a href="/update-bookmark" class="bth border-shadow update">
+        <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+      </a> -->
+      <a class="btn border-shadow delete" data-id=<%=bookmarks[i]._id%>>
+        <span class="text-gradient"><i class="fas fa-times"></i></span>
+      </a>
+    </td>
+  </tr>
+  <%}%>
